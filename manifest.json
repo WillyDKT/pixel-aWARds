@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Pixel War Chicken Guide",
+  "version": "1.5.0",
+  "description": "A non-interactive pixel-aligned chicken guide for the Decathlon Innovation Awards Pixel War.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://innovation-awards2026.decathlon.com/en-us/pixelwar*"
+      ],
+      "js": [
+        "zoom-bridge.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://innovation-awards2026.decathlon.com/en-us/pixelwar*"
+      ],
+      "js": [
+        "template.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
